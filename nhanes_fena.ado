@@ -372,7 +372,7 @@ qui {
 					local prepan_counter = 0
 					
 					macro drop nhanes
-					global nhanes "https://wwwn.cdc.gov/Nchs/Nhanes"
+					global nhanes "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public"
 					
 					foreach i of numlist `ys_2' {
 						
@@ -408,7 +408,7 @@ qui {
 									}
 								}
 								noi di "Loading NHANES Data For " "`period'...................", _continue
-								import sasxport5 "$nhanes/`i'-`ye_helper2'/`ds_name'.XPT", clear
+								import sasxport5 "$nhanes/`i'/DataFiles/`ds_name'.XPT", clear
 								tempfile ds`dataset_counter'
 								keep seqn ///
 										riagendr ///
@@ -432,7 +432,7 @@ qui {
 									}
 								}
 								noi di "Loading NHANES Data For " "`period'...................", _continue
-								import sasxport5 "$nhanes/`i'-`ye_helper2'/`ds_name'.XPT", clear
+								import sasxport5 "$nhanes/`i'/DataFiles/`ds_name'.XPT", clear
 								tempfile ds`dataset_counter'
 								capture drop year_start
 								gen year_start = `i'
@@ -488,7 +488,7 @@ qui {
 										}
 									}
 									
-									import sasxport5 "$nhanes/`i'-`ye_helper2'/`ds_name'.XPT", clear
+									import sasxport5 "$nhanes/`i'/DataFiles/`ds_name'.XPT", clear
 									tempfile ex_`j_helper'
 									save `ex_`j_helper'', replace
 									
@@ -529,7 +529,7 @@ qui {
 								
 								if ((`i' == 1999) | (`i' == 2001)) {
 									local ds_name : di "DRXTOT`name_helper3'"
-									import sasxport5 "$nhanes/`i'-`ye_helper2'/`ds_name'.XPT", clear
+									import sasxport5 "$nhanes/`i'/DataFiles/`ds_name'.XPT", clear
 								} 
 								else if (inrange(`i', 2017, 2020)) {
 									forvalues j = 1/2 {
@@ -539,7 +539,7 @@ qui {
 										else if ("`s2017'" == "s2017") {
 											local ds_name : di "DR" "`j'" "TOT" "`name_helper3'"
 										}
-										import sasxport5 "$nhanes/`i'-`ye_helper2'/`ds_name'", clear
+										import sasxport5 "$nhanes/`i'/DataFiles/`ds_name'", clear
 										
 										tempfile diet_`j'
 										save `diet_`j'', replace
@@ -550,7 +550,7 @@ qui {
 								else if (`i' > 2002) {
 									forvalues j = 1/2 {
 										local ds_name : di "DR" "`j'" "TOT" "`name_helper3'"
-										import sasxport5 "$nhanes/`i'-`ye_helper2'/`ds_name'", clear
+										import sasxport5 "$nhanes/`i'/DataFiles/`ds_name'", clear
 										
 										tempfile diet_`j'
 										save `diet_`j'', replace
@@ -603,7 +603,7 @@ qui {
 										}
 									}
 									
-									import sasxport5 "$nhanes/`i'-`ye_helper2'/`ds_name'.XPT", clear
+									import sasxport5 "$nhanes/`i'/DataFiles/`ds_name'.XPT", clear
 									tempfile qs_`j_helper'
 									save `qs_`j_helper'', replace
 									
