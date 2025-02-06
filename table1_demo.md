@@ -2,7 +2,6 @@
 
 # Table 1: Demographics For NHANES Control Population
 
-| **Category**                                         | **Value** | **Count (%)**                |
 |------------------------------------------------------|-----------|------------------------------|
 | **Age in Years, median[IQR]**                        |           | 46.0 [31.0, 64.0]            |
 | **Glycated Hemoglobin %, median[IQR]**               |           | 5.4 [5.1, 5.8]               |
@@ -58,7 +57,6 @@
 
 ## Table 1: Demographics For 90 Day Mortality
 
-| **Category**                           | **Value** | **Count (%)**       |
 |----------------------------------------|-----------|---------------------|
 | **Calculated Donor Age in Years at Organ Recovery or Referral Date, median[IQR]** |           | 40.0 [32.0, 49.0]   |
 | **SRTR Donor Race, n(%)**              |           |                     |
