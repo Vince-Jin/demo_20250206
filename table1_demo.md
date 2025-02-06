@@ -1,8 +1,6 @@
 # Table 1 Examples
 
-## Table 1: NHANES Control Population
-
-# Table 1: Demographics
+# Table 1: Demographics For NHANES Control Population
 
 | **Category**                                         | **Value** | **Count (%)**                |
 |------------------------------------------------------|-----------|------------------------------|
