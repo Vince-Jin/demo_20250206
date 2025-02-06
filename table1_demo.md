@@ -1,20 +1,45 @@
-General set up for the environment.
+# Table 1: Demographics
 
-``` stata
-
-cls
-clear all
-
-qui do "https://raw.githubusercontent.com/Vince-Jin/demo_20250206/refs/heads/main/nhanes_fena.ado"
-qui do "https://raw.githubusercontent.com/Vince-Jin/demo_20250206/refs/heads/main/table1_fena.ado"
-
-```
-
-Actually running the table1
-
-``` stata
-
-use "https://github.com/Vince-Jin/demo_20250206/refs/heads/main/nhanes_public.dta", clear
-noi table1_fena, var("age ghb alb_u alb_log cre_u cre_log glu gender race bmi diabete dia_med hypertension hyp_med smoke education hs")
-
-```
+| **Category**                           | **Value** | **Count (%)**       |
+|----------------------------------------|-----------|---------------------|
+| **Calculated Donor Age in Years at Organ Recovery or Referral Date, median[IQR]** |           | 40.0 [32.0, 49.0]   |
+| **SRTR Donor Race, n(%)**              |           |                     |
+|                                        | ASIAN     | 6111 (3.3)          |
+|                                        | BLACK     | 20875 (11.2)        |
+|                                        | MULTI     | 1002 (0.5)          |
+|                                        | NATIVE    | 1016 (0.5)          |
+|                                        | PACIFIC   | 820 (0.4)           |
+|                                        | WHITE     | 156608 (84.0)       |
+| **Donor/s Gender, n(%)**               |           |                     |
+|                                        | F         | 111864 (60.0)       |
+|                                        | M         | 74681 (40.0)        |
+| **Working for Income:, n(%)**          |           |                     |
+|                                        | N         | 18237 (9.8)         |
+|                                        | U         | 4843 (2.6)          |
+|                                        | Y         | 95892 (51.4)        |
+| **Donor/s Blood Type, n(%)**           |           |                     |
+|                                        | A         | 46685 (25.0)        |
+|                                        | A1        | 3066 (1.6)          |
+|                                        | A1B       | 147 (0.1)           |
+|                                        | A2        | 960 (0.5)           |
+|                                        | A2B       | 105 (0.1)           |
+|                                        | AB        | 1777 (1.0)          |
+|                                        | B         | 14975 (8.0)         |
+|                                        | O         | 118756 (63.7)       |
+|                                        | UNK       | 71 (0.0)            |
+| **Highest Education Level, n(%)**      |           |                     |
+|                                        | 1         | 251 (0.1)           |
+|                                        | 2         | 2205 (1.2)          |
+|                                        | 3         | 34043 (18.2)        |
+|                                        | 4         | 33516 (18.0)        |
+|                                        | 5         | 37996 (20.4)        |
+|                                        | 6         | 17264 (9.3)         |
+|                                        | 996       | 95 (0.1)            |
+|                                        | 998       | 27496 (14.7)        |
+| **History of Hypertension:, n(%)**     |           |                     |
+|                                        | 1         | 107438 (57.6)       |
+|                                        | 2         | 2294 (1.2)          |
+|                                        | 3         | 400 (0.2)           |
+|                                        | 4         | 335 (0.2)           |
+|                                        | 5         | 993 (0.5)           |
+|                                        | 998       | 1035 (0.6)          |
